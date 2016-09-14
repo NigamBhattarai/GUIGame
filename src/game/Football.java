@@ -17,7 +17,7 @@ import java.awt.Point;
  */
 public class Football extends GameObject{
     Bat bat;
-    public Football(Point location, String imageName,Bat bat) {
+    public Football(Point location, String imageName,Bat bat,Brick brick) {
         super(location, imageName);
         this.bat = bat;
         vertical = Direction.down;
