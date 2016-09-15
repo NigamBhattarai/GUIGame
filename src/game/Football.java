@@ -28,7 +28,8 @@ public class Football extends GameObject{
     public void move() {
         if(location.y>=370-height)
         { 
-            vertical = Direction.up;
+            location.y=340-height;
+            location.x=bat.location.x;
             life--;
         }
         if(location.x>=600-width)

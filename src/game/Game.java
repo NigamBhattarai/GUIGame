@@ -63,7 +63,7 @@ public class Game implements KeyListener{
                 lx-=45;
             }
             brick = new Brick(new Point(lx,ly[l]),40,20,Type.rectangle,ball);
-            brick.setColor(Color.yellow);
+            brick.setColor(Color.green);
             screen.add(brick);
         }
         screen.add(ball);

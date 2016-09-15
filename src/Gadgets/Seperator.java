@@ -27,5 +27,4 @@ public class Seperator extends GameObject {
     @Override
     public void design(Graphics g) {
     }
-    
 }

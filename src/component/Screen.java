@@ -96,7 +96,4 @@ ArrayList<GameObject> gameObjects=new ArrayList<GameObject>();
             System.out.println("Nothing on screen to cast");
         }
     }
-
-    
-    
 }

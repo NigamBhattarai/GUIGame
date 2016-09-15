@@ -5,6 +5,7 @@ import core.Type;
 import game.Brick;
 import game.Brick;
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Point;
 import javax.swing.JLabel;
@@ -28,6 +29,7 @@ public class Score extends GameObject{
     @Override
     public void design(Graphics g) {
         g.setColor(Color.black);
+        g.setFont(new Font("",3,12));
         g.drawString("Score : "+brick.score, 2, height-4);
     }
     

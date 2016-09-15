@@ -35,7 +35,6 @@ public class GOver extends GameObject{
         g.setColor(Color.BLACK);
         g.setFont(new Font("Sans Serif",3,32));
         g.drawString("Game Over!!!! ", 302,210);
-        g.setFont(new Font("Sans Serif",1,12));
     }
     public void setstate()
     {

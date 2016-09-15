@@ -17,7 +17,7 @@ import javax.imageio.ImageIO;
  * @author vikram
  */
 public abstract class GameObject implements Renderable{
-    protected Point location;
+    public Point location;
     protected int width,height;
     protected Color color;
     protected Direction vertical,horizontal;
@@ -107,7 +107,6 @@ public abstract class GameObject implements Renderable{
         design(g);
     }
     public abstract void design(Graphics g);
-  
     public void processImage(Graphics g)
     {
         if(img!=null)

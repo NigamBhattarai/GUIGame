@@ -9,6 +9,7 @@ import component.GameObject;
 import core.Type;
 import game.Football;
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Point;
 import javax.swing.JLabel;
@@ -31,6 +32,7 @@ public class Life extends GameObject{
     @Override
     public void design(Graphics g) {
         g.setColor(Color.white);
+        g.setFont(new Font("",3,12));
         g.drawString("Lifes : "+ball.life, 500, height-4);
     }
 }
