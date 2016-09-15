@@ -98,7 +98,11 @@ public abstract class GameObject implements Renderable{
                 break;
             case image:
                 processImage(g);
+                break;
+            case line:
+                g.drawLine(location.x, location.y, width, height);
             case other:
+                
         }
         design(g);
     }

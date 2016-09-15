@@ -3,33 +3,30 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package game;
+package Gadgets;
 
 import component.GameObject;
-import core.Type;
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Point;
-import javax.swing.JLabel;
 
 /**
  *
  * @author nigam
  */
-public class Life extends GameObject{
-    Football ball;
-    public Life(Point location, int width, int height, Type type) {
-        super(location, width, height, type);
+public class Background extends GameObject{
+
+    public Background(Point location, String imageSrc) {
+        super(location, imageSrc);
     }
-    
+
     @Override
     public void move() {
-        
+
     }
 
     @Override
     public void design(Graphics g) {
-        g.setColor(Color.white);
-        g.drawString("Lifes : "+ball.life, 500, height-4);
+
     }
+    
 }

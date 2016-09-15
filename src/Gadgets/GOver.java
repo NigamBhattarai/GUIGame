@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package game;
+package Gadgets;
 
 import component.GameObject;
 import core.Type;
+import game.Football;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;

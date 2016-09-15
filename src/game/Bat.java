@@ -37,8 +37,9 @@ public class Bat extends GameObject{
     }
     @Override
     public void design(Graphics g) {
-        g.setColor(Color.black);
-       g.fillOval(location.x, location.y, height-5, height-5);
+       g.setColor(Color.black);
+       g.fillOval(location.x, location.y+10, height-5, height-5);
+       g.fillOval(location.x+85, location.y+10, height-5, height-5);
        //g.drawOval(width, width, width, height);
         
     }

@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package game;
+package Gadgets;
 
 import component.GameObject;
+import core.Type;
 import java.awt.Graphics;
 import java.awt.Point;
 
@@ -13,20 +14,18 @@ import java.awt.Point;
  *
  * @author nigam
  */
-public class Background extends GameObject{
+public class Seperator extends GameObject {
 
-    public Background(Point location, String imageSrc) {
-        super(location, imageSrc);
+    public Seperator(Point location, int width, int height, Type type) {
+        super(location, width, height, type);
     }
 
     @Override
     public void move() {
-
     }
 
     @Override
     public void design(Graphics g) {
-
     }
     
 }

@@ -3,7 +3,7 @@ package component;
 import core.Type;
 import game.Brick;
 import game.Football;
-import game.GOver;
+import Gadgets.GOver;
 import game.Game;
 import java.awt.Color;
 import java.awt.Dimension;

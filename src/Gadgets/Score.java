@@ -1,7 +1,8 @@
-package game;
+package Gadgets;
 
 import component.GameObject;
 import core.Type;
+import game.Brick;
 import game.Brick;
 import java.awt.Color;
 import java.awt.Graphics;
@@ -26,7 +27,7 @@ public class Score extends GameObject{
 
     @Override
     public void design(Graphics g) {
-        g.setColor(Color.white);
+        g.setColor(Color.black);
         g.drawString("Score : "+brick.score, 2, height-4);
     }
     

@@ -10,5 +10,5 @@ package core;
  * @author vikram
  */
 public enum Type {
-    image,circle,rectangle,other
+    image,circle,rectangle,other,line
 }
