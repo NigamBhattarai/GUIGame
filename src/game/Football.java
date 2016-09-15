@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package game;
 
 import component.GameObject;
@@ -27,9 +22,9 @@ public class Football extends GameObject{
     @Override
     public void move() {
         if(location.y>=370-height)
-        { 
+        {
             location.y=340-height;
-            location.x=bat.location.x;
+            location.x=bat.location.x+40;
             life--;
         }
         if(location.x>=600-width)

@@ -6,6 +6,7 @@
 package game;
 
 import component.GameObject;
+import component.Screen;
 import core.Type;
 import java.awt.Color;
 import java.awt.Graphics;
@@ -17,6 +18,7 @@ import java.awt.Point;
  */
 public class Bat extends GameObject{
 
+    Screen screen;
     public Bat(Point location, int width, int height, Type type) {
         super(location, width, height, type);
     }

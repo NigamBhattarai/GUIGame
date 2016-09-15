@@ -21,7 +21,7 @@ public abstract class GameObject implements Renderable{
     protected int width,height;
     protected Color color;
     protected Direction vertical,horizontal;
-    private BufferedImage img=null;
+    public BufferedImage img=null;
     private Type type;
     public GameObject(Point location,String imageSrc)
     {
