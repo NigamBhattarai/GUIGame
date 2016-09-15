@@ -98,6 +98,7 @@ public abstract class GameObject implements Renderable{
                 break;
             case image:
                 processImage(g);
+            case other:
         }
         design(g);
     }

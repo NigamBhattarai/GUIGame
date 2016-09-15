@@ -23,6 +23,8 @@ public class Stage extends JFrame
          this.setSize(600,400);
          this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
          this.setVisible(true);
+         this.setResizable(false);
+         this.setAlwaysOnTop(true);
+         this.setCursor(13);
      }
-
 }

@@ -14,7 +14,7 @@ public class Brick extends GameObject{
     Football ball;
     Game game;
     public static int brickremain=20;
-    int score=0;
+    public static int score=0;
     public Brick(Point location, int width, int height, Type type,Football ball) {
         super(location, width, height, type);
         this.ball=ball;

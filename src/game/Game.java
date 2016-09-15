@@ -23,14 +23,23 @@ public class Game implements KeyListener{
     Screen screen;
     Football ball;
     Bat bat;
+    GOver gover;
     Brick brick;
+    Background background;
     public Game()
     {
         bat = new Bat(new Point(250,340),100,20,Type.rectangle);
         bat.setColor(Color.RED);
-        
+        Score score = new Score(new Point(2,0),70,30,Type.other);
+        score.setColor(Color.BLACK);
+        Life life = new Life(new Point(500,2),70,30,Type.other);
+        life.setColor(Color.BLACK);
+        gover = new GOver(new Point(150,200),300,300,Type.other);
+        gover.setColor(Color.BLACK);
         ball = new Football(new Point(100,100),"ball1.png",bat,brick);
+        background = new Background(new Point(0,0),"background.jpg");
         screen = new Screen(600,350,Color.WHITE);
+        screen.add(background);
         int lx=10;
         int ly[]={50,50,50,50,50,50,50,50,50,50,50,75,75,75,75,75,75,75,75,75,75};
         for(int l=0; l<20; l++)
@@ -49,6 +58,12 @@ public class Game implements KeyListener{
         }
         screen.add(ball);
         screen.add(bat);
+        if(gover.show==true)
+        {
+            screen.add(gover);
+        }
+        screen.add(score);
+        screen.add(life);
         Stage stage = new Stage(screen);
         stage.addKeyListener(this);
         screen.play();
@@ -68,7 +83,6 @@ public class Game implements KeyListener{
         bat.right();
     
     }
-
     @Override
     public void keyReleased(KeyEvent e) {
     System.out.println("Key Released!!!");

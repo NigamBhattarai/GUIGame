@@ -8,39 +8,36 @@ package game;
 import component.GameObject;
 import core.Type;
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Point;
 
 /**
  *
- * @author anmol
+ * @author nigam
  */
-public class Bat extends GameObject{
-
-    public Bat(Point location, int width, int height, Type type) {
+public class GOver extends GameObject{
+    Football ball;
+    public static Boolean show;
+    public GOver(Point location, int width, int height, Type type) {
         super(location, width, height, type);
+        show = new Boolean(false);
     }
-
+    
     @Override
     public void move() {
-    
-    }
-    public void left()
-    {
-        if(location.x>0)
-            location.x-=15;
-    }
-    public void right()
-    {
-        if(location.x<600-this.width)
-            location.x+=15;
-    }
-    @Override
-    public void design(Graphics g) {
-        g.setColor(Color.black);
-       g.fillOval(location.x, location.y, height-5, height-5);
-       //g.drawOval(width, width, width, height);
         
     }
-    
+
+    @Override
+    public void design(Graphics g) {
+        g.setColor(Color.BLACK);
+        g.setFont(new Font("Sans Serif",3,32));
+        g.drawString("Game Over!!!! ", 302,210);
+        g.setFont(new Font("Sans Serif",1,12));
+    }
+    public void setstate()
+    {
+        show=true;
+    }
 }

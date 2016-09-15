@@ -17,24 +17,25 @@ import java.awt.Point;
  */
 public class Football extends GameObject{
     Bat bat;
+    public static int life=3;
     public Football(Point location, String imageName,Bat bat,Brick brick) {
         super(location, imageName);
         this.bat = bat;
         vertical = Direction.down;
         horizontal = Direction.left;
     }
-
     @Override
     public void move() {
         if(location.y>=370-height)
         { 
             vertical = Direction.up;
+            life--;
         }
         if(location.x>=600-width)
         {
           horizontal=Direction.left;
         }
-        if(location.y<=0)
+        if(location.y<=30)
         {
             vertical=Direction.down;
         }
@@ -70,7 +71,5 @@ public class Football extends GameObject{
     }
     @Override
     public void design(Graphics g) {
-    
     }
-    
 }

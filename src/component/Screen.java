@@ -1,10 +1,14 @@
 package component;
 
+import core.Type;
 import game.Brick;
+import game.Football;
+import game.GOver;
 import game.Game;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.Point;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.logging.Level;
@@ -18,8 +22,10 @@ import javax.swing.JPanel;
 public class Screen extends JPanel implements Runnable{
     Thread game;
     Brick brick;
+    Football ball;
+    GOver gover;
     Game gme;
-    ArrayList<GameObject> gameObjects=new ArrayList<GameObject>();
+ArrayList<GameObject> gameObjects=new ArrayList<GameObject>();
 
     public Screen(int width,int height,Color backgroundColor)
     {
@@ -75,6 +81,7 @@ public class Screen extends JPanel implements Runnable{
             while(true)
             {
                 if(brick.brickremain==0)break;
+                if(ball.life==0){break;}
                 try {
                     Thread.sleep(10);
                 } catch (InterruptedException ex) {
