@@ -63,7 +63,6 @@ public class Football extends GameObject{
             location.y+=1;
         }
         if(this.didCollide(bat))toggle();
-            
     }
     public void toggle(){
         if(vertical==Direction.down)vertical=Direction.up;

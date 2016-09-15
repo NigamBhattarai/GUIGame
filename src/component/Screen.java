@@ -1,5 +1,7 @@
 package component;
 
+import game.Brick;
+import game.Game;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -15,6 +17,8 @@ import javax.swing.JPanel;
  */
 public class Screen extends JPanel implements Runnable{
     Thread game;
+    Brick brick;
+    Game gme;
     ArrayList<GameObject> gameObjects=new ArrayList<GameObject>();
 
     public Screen(int width,int height,Color backgroundColor)
@@ -70,6 +74,7 @@ public class Screen extends JPanel implements Runnable{
         {
             while(true)
             {
+                if(brick.brickremain==0)break;
                 try {
                     Thread.sleep(10);
                 } catch (InterruptedException ex) {

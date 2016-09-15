@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package component;
 
 import core.Direction;
@@ -79,20 +74,6 @@ public abstract class GameObject implements Renderable{
     {
         return this.getArea().intersects(other.getArea());
     }   
-    public void toggle() {
-        if (vertical == Direction.up) {
-            vertical = Direction.down;
-        } else {
-            vertical = Direction.up;
-        }
-
-        if (horizontal == Direction.right) {
-            horizontal = Direction.left;
-        } else {
-            horizontal = Direction.right;
-        }
-
-    }
     public Rectangle getArea(){
       return new Rectangle(location.x,location.y,width,height);
     } 

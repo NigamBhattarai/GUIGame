@@ -12,6 +12,9 @@ import java.awt.Point;
  */
 public class Brick extends GameObject{
     Football ball;
+    Game game;
+    public static int brickremain=20;
+    int score=0;
     public Brick(Point location, int width, int height, Type type,Football ball) {
         super(location, width, height, type);
         this.ball=ball;
@@ -19,9 +22,15 @@ public class Brick extends GameObject{
 
     @Override
     public void move() {
-        if(this.didCollide(ball)){this.setLocation(new Point(-50,-50)); ball.toggle();}
+        if(this.didCollide(ball))
+        {
+            this.setLocation(new Point(-50,-50));
+            ball.toggle();
+            this.brickremain--;
+            this.score++;
+            System.out.println("Remaining:"+brickremain);
+        }
     }
-
     @Override
     public void design(Graphics g) {
     }
