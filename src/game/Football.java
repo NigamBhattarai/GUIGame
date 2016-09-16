@@ -12,7 +12,7 @@ import java.awt.Point;
  */
 public class Football extends GameObject{
     Bat bat;
-    public static int life=3;
+    public static int life=300;
     public Football(Point location, String imageName,Bat bat,Brick brick) {
         super(location, imageName);
         this.bat = bat;
