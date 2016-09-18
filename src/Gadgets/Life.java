@@ -31,8 +31,22 @@ public class Life extends GameObject{
 
     @Override
     public void design(Graphics g) {
-        g.setColor(Color.white);
-        g.setFont(new Font("",3,12));
-        g.drawString("Lifes : "+ball.life, 500, height-4);
+        int p=550;
+        for(int i=0;i<ball.life;i++)
+        {
+        g.setColor(Color.red);
+        g.fillOval(p,18,10,10);
+        g.setColor(Color.yellow);
+        g.drawOval(p,18,10,10);
+        p-=40;
+        //
+        //g.drawString("Lifes : "+ball.life, 500, height-4);
+        }
+        if(ball.life<=0)
+        {
+            g.setFont(new Font("Comic Sans",1,30));
+            g.drawString("Game Over ", 200, 180);
+        }
+            
     }
 }
