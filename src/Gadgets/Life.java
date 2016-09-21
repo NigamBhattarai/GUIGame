@@ -35,17 +35,17 @@ public class Life extends GameObject{
         for(int i=0;i<ball.life;i++)
         {
         g.setColor(Color.red);
-        g.fillOval(p,18,10,10);
-        g.setColor(Color.yellow);
-        g.drawOval(p,18,10,10);
-        p-=40;
-        //
+        g.setFont(new Font(" ",5,30));
+        g.drawString("❤",p,25);
+        p-=30;
         //g.drawString("Lifes : "+ball.life, 500, height-4);
         }
         if(ball.life<=0)
         {
+            g.setFont(new Font("Comic Sans",1,60));
+            g.drawString("😢", 270, 160);
             g.setFont(new Font("Comic Sans",1,30));
-            g.drawString("Game Over ", 200, 180);
+            g.drawString("Game Over ", 200, 200);
         }
             
     }

@@ -41,7 +41,7 @@ public class Game implements KeyListener{
         score.setColor(Color.BLACK);
         Life life = new Life(new Point(500,2),70,30,Type.other);
         life.setColor(Color.BLACK);
-        seperator = new Seperator(new Point(0,30),600,33,Type.line);
+        seperator = new Seperator(new Point(0,30),600,30,Type.line);
         seperator.setColor(Color.BLACK);
         gover = new GOver(new Point(150,200),300,300,Type.other);
         gover.setColor(Color.BLACK);
